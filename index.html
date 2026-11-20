@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тайны слов - Виселица</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="header">
+            <h1 class="title">Тайны слов</h1>
+            <p class="subtitle">Классическая игра в виселицу</p>
+            <div class="header-controls">
+                <button id="languageBtn" class="icon-btn" title="Язык">🇷🇺 RU</button>
+                <span id="balanceDisplay" class="balance">💰 0</span>
+                <button id="shopBtn" class="icon-btn" title="Магазин">🛒</button>
+                <button id="profileBtn" class="icon-btn" title="Профиль">👤</button>
+                <button id="leaderboardBtn" class="icon-btn" title="Рейтинг">🏆</button>
+                <button id="adminBtn" class="icon-btn" title="Админ" style="display:none">⚙️</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="categories-section">
+                <h2>Выберите категорию</h2>
+                <div id="categoriesContainer" class="categories-grid"></div>
+            </div>
+
+            <div class="game-area" id="gameArea" style="display:none">
+                <div class="hangman-wrapper" id="hangmanArea"></div>
+                <div class="word-display" id="wordDisplay"></div>
+                <div class="keyboard" id="keyboard"></div>
+                <div class="game-info">
+                    <span id="mistakesDisplay">Ошибки: 0/6</span>
+                    <button id="hintBtn" class="hint-btn">💡 Подсказка</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <button onclick="showHowToPlay()">Как играть</button>
+            <button onclick="showNews()">Новости</button>
+            <button onclick="showSupport()">Поддержка</button>
+            <button onclick="showDonate()">Поддержать</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="enhancements.js"></script>
+</body>
+</html>
